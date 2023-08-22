@@ -1,0 +1,1 @@
+# upateco-django-practices
