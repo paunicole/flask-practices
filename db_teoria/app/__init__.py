@@ -39,6 +39,13 @@ def init_app():
             })
         return actors, 200
 
+    @app.route('/actors', methods = ['POST'])
+    def create_actor():
+        query= "INSERT INTO sakila.actor (first_name, last_name, last_update) VALUES (%s,%s,%s);"
+        params = request.args.get('first_name', ''), request.args.get('last_name', ''), request.args.get('last_update', '')
+        DatabaseConnection.execute_query(query, params)
+        return {"msg": "Actor creado con éxito"}, 201
+
     @app.route('/actors/<int:actor_id>', methods = ['PUT'])
     def update_actor(actor_id):
         query = "UPDATE sakila.actor SET last_update = %s WHERE actor.actor_id = %s;"
