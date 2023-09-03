@@ -161,7 +161,7 @@ def init_app():
     # ======== Ejercicio 2.4 ========
     @app.route('/products/<int:product_id>', methods = ['PUT'])
     def update_customer(customer_id):
-        query = "UPDATE production.products SET list_price = %s WHERE products.product_id = %s;"
+        query = "UPDATE production.products SET list_price = %s WHERE product_id = %s;"
         params = request.args.get('list_price', ''), customer_id
         DatabaseConnection.execute_query(query, params)
         return {"msg": "Datos del producto actualizados con éxito"}, 200
@@ -169,9 +169,9 @@ def init_app():
 
     # ======== Ejercicio 2.5 ========
     @app.route('/products/<int:product_id>', methods = ['DELETE'])
-    def delete_product(actor_id):
-        query = "DELETE FROM production.products WHERE production.product_id = %s;"
-        params = actor_id,
+    def delete_product(product_id):
+        query = "DELETE FROM production.products WHERE product_id = %s;"
+        params = product_id,
         DatabaseConnection.execute_query(query, params)
 
         return {"msg": "Producto eliminado con éxito"}, 204
