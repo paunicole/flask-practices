@@ -7,15 +7,11 @@ class Config:
 	STATIC_FOLDER = "static_folder/"
 
 	APP_NAME = 'Routing App'
-	DESCRIPTION = 'Aplicación para practicar routing en Flask'
-	DEVELOPERS = [
-		{
-			'nombre': 'Carlos',
-			'apellido': 'Santana'
-		},
-		{
-			'nombre': 'James',
-			'apellido': 'Hetfield'
-		}
+	APP_DESCRIPTION = 'Aplicación para practicar routing en Flask'
+	APP_DEVELOPERS = [
+		{'nombre': 'Paula Nicole', 'apellido': 'Cardozo Gómez'},
+		{'nombre': 'Luz', 'apellido': 'Alcoba'},
+		{'nombre': 'Lorena', 'apellido': 'Rodriguez'},
+		{'nombre': 'Mauricio', 'apellido': 'Navarro'}
 	]
-	VERSION = '1.0.0'
+	APP_VERSION = '2.3.2'
