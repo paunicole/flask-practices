@@ -18,3 +18,7 @@
 
 ### MVC con Blueprints y Sesiones #2
 - [Backend del proyecto MVC con Blueprints y Sesiones utilizando la base de datos Production en MySQL](mvc_bp_sessions_mysql_production_backend)
+
+### MVC con Blueprints, Sesiones y Manejo de Errores
+- [API MVC con Blueprints, Sesiones y Manejo de Errores utilizando la base de datos Sakila en MySQL](mvc_bp_sessions_mysql_sakila_errores)
+- [API MVC con Blueprints, Sesiones y Manejo de Errores utilizando la base de datos Sales en MySQL](mvc_bp_sessions_mysql_sales_errores)
