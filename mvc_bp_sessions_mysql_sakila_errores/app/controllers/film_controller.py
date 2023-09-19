@@ -1,4 +1,5 @@
 from ..models.film_model import Film
+from ..models.exceptions import InvalidDataError
 
 from flask import request
 
@@ -29,6 +30,17 @@ class FilmController:
         """Create a new film"""
         data = request.json
         # TODO: Validate data
+
+        # Validar el atributo title
+        if data.get('title') is not None:
+            if len(data.get('title')) < 3:
+                raise InvalidDataError('El título debe tener tres caracteres como mínimo.')
+
+        # Validar el atributo language_id
+        if data.get('language_id') is not None:
+            if not isinstance(data.get('language_id'), int):
+                raise InvalidDataError('El ID del idioma debe ser un número entero.')
+
         if data.get('rental_rate') is not None:
             if isinstance(data.get('rental_rate'), int):
                 data['rental_rate'] = Decimal(data.get('rental_rate'))/100

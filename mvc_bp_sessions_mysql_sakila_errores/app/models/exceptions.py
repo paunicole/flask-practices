@@ -19,9 +19,16 @@ class CustomException(Exception):
         response.status_code = self.status_code
         return response
 
-# =========== Ejercicio 1, 3, 5 ============
 
+# =========== Ejercicio 1, 3, 5 ============
 class FilmNotFound(CustomException):
 
     def __init__(self, description = 'El film solicitado no existe'): 
         super().__init__(404, "Film Not Found", description)
+
+
+# =========== Ejercicio 2, 4 ============
+class InvalidDataError(CustomException):
+
+    def __init__(self, description = 'Dato no válido'): 
+        super().__init__(400, "Invalid Data Error", description)
