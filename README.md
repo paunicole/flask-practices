@@ -22,3 +22,7 @@
 ### MVC con Blueprints, Sesiones y Manejo de Errores
 - [API MVC con Blueprints, Sesiones y Manejo de Errores utilizando la base de datos Sakila en MySQL](mvc_bp_sessions_mysql_sakila_errores)
 - [API MVC con Blueprints, Sesiones y Manejo de Errores utilizando la base de datos Sales en MySQL](mvc_bp_sessions_mysql_sales_errores)
+
+### Proyecto #1: Todo App
+- [Backend del proyecto "todo_app" MVC con Blueprints utilizando la base de datos Todo_app_db en MySQL](todo_app_backend)
+- [Frontend del proyecto "todo_app" MVC con Blueprints utilizando la base de datos Todo_app_db en MySQL](todo_app_frontend)
